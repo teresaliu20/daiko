@@ -1,1 +1,1 @@
-# daiko
+# daiko-frontend
