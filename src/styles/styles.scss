@@ -2,12 +2,17 @@
 $vin-blue: #5bb7db;
 $vin-green: #60b044;
 $vin-red: #ff0000;
+$background-color: #FFF9F1;
+$light-grey: #E8E9EC;
+$dark-grey: #636465;
+$spark-yellow: #FBBD32;
 
 /* Styles */
 body {
   font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.4em;
   color: #4d4d4d;
+  background-color: $background-color;
   min-width: 230px;
   max-width: 550px;
   margin: 0 auto;
@@ -22,10 +27,55 @@ td {
 }
 
 h2 {
-	color: $vin-blue;
+	color: $spark-yellow;
 }
 
 .savings { color: $vin-green; }
 .loss { color: $vin-red; }
 input.small { width: 46px; }
 td.fuel-savings-label { width: 175px; }
+
+.committee-page {
+  @extend .page;
+}
+
+.committee-list-page {
+  @extend .page;
+}
+
+.page {
+  background-color: white;
+  border: 1px solid $light-grey;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  .main-header {
+    border-bottom: 1px solid $light-grey;
+    padding-bottom: 20px;
+  }
+  .info-line {
+    .header {
+      display: inline-block;
+    }
+    .content {
+      display: inline-block;
+      margin-left: 20px;
+      font-size: 18px;
+    }
+  }
+  .info-container {
+
+  }
+  .link-wrapper {
+    display: flex;
+    .link {
+      margin: 10px;
+      border: 1px solid $light-grey;
+      min-width: 50px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}
